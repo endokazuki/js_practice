@@ -103,6 +103,112 @@ console.log(num30)
 var num40=10
 var num50="10"
 console.log(num40==num50)
+//文字列・数値を自動変換を行い比較する
 console.log(num40===num50)
+//文字列・数値を自動変換を行わず比較する
 
+var fruits_object={"kind":"fruits","name":"banana","number":3}
+console.log(fruits_object instanceof Object)
+//オブジェクト：各要素に文字列キーでアクセス可能な配列
+//キー値：プロパティ名
+//JSON:javascriptオブジェクトから変換されたデータ
+console.log(fruits_object)
+var fruits_box=fruits_object
 
+delete fruits_object.name
+//プロパティ名の削除(中身はundefinedになる)
+delete fruits_box
+//変数の削除は不可（関数も同様）
+
+console.log(fruits_object)
+//削除されたプロパティ名以外のプロパティは残る
+console.log(fruits_object.name)
+console.log(fruits_box)
+
+console.log("toString" in fruits_object)
+
+fruits_object.country=function(){
+    console.log("japan")
+}
+
+console.log(fruits_object.country)
+console.log(fruits_object)
+console.log(typeof fruits_object.kind)
+//String
+console.log(typeof fruits_object.name)
+//undefined
+console.log(typeof fruits_object.number)
+//number
+console.log(typeof fruits_object.country)
+//function
+console.log(typeof fruits_object)
+//object
+
+console.log(void(0))
+//undifinedを返す
+
+var name_list="taro"
+switch(name_list){
+    case "tanaka":
+        console.log("your name is tanaka")
+    case "taro":
+        console.log("your name is taro")
+    case "hanako":
+        console.log("your name is hanako")
+}
+//your name is taro,your name is hanako
+//適切ではないswitch文
+
+switch(name_list){
+    case "tanaka":
+        console.log("your name is tanaka")
+        break
+    case "taro":
+        console.log("your name is taro")
+        break
+    default:
+        console.log("your name is hanako")
+}
+//your name is taro
+//適切なswitch文
+
+if(name_list=="tanaka"){
+    console.log("your name is tanaka")
+}else if(name_list=="taro"){
+    console.log("your name is taro")
+}else if(name_list=="hanako"){
+    console.log("your name is hanako")
+}
+//if文で書いた場合
+
+for(var odd_count=0;odd_count<10;odd_count++){
+    if(odd_count%2==0){
+        console.log("no count")
+    }
+    else{
+        console.log(odd_count)
+    }
+}
+//奇数を出力
+
+var ten_count=0
+while(ten_count<10){
+    if(ten_count<5){
+        ten_count +=1
+    }
+    ten_count+=5
+}
+console.log(ten_count)
+//0,1,6,11
+//while文条件を満たすまで処理を繰り返す
+
+var ten_count=0
+do{
+    if(ten_count<5){
+        ten_count +=1
+    }
+    ten_count+=5
+}while(ten_count<10)
+console.log(ten_count)
+//0,1,6,11
+//do文条件を満たすまで処理を繰り返す(とりあえず回してwhile文の条件を検証する)
