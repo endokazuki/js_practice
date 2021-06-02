@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice1</title>
+</head>
+<body>
+    <p>content</p>
+    <p>2-1から2-25まで</p>
+    <input type="button" value="ログ表示" onclick="btn_onclick()">
+
+    <label>名前：<input type="text" oninput="input_Change()"></label>
+      <!--inputイベント:textの内容が入力されるたびに発火する-->
+    
+      <form id="form">
+        <input type="text" placeholder="text input">
+        <input type="password" placeholder="password">
+      </form>
+
+    <button id="b1">イベントリスナ</button>
+
+    <div id="first">
+        first
+        <p id="second">
+            second
+        </p>
+    </div>
+
+    <div id="third">
+        <p>
+            third
+        </p>
+        <p id="forth">
+            forth
+        </p>
+    </div>
+
+    <div id="fifth">
+        <p>
+            fifth
+        </p>
+        <p id="sixth">
+            sixth
+        </p>
+    </div>
+
+    <form method="POST" action="#">
+        <br>
+    <input type="text" id="write">
+    <button>OK</button>
+    </form>
+
+    <form id="form1" method="POST" action="#" name="reset">
+        <!--form:用紙-->
+        <br>
+    <input type="text" id="write2" name="write2_name">
+    <a href="javascript:void(0)" onclick="submitfunc()"></a>
+    <button>OK</button>
+    </form>
+
+    <form id="form2" method="POST" action="#">
+        <br>
+    <input type="text" id="write3">
+    <a href="javascript:void(0)" onclick="submitfunc2()"></a>
+    <button>reset</button>
+    </form>
+
+    <form id="form3" method="POST" action="#">
+        テキスト<input type="text" id="text1">
+        <input type="submit" id="btn1" value="OK">
+    </form>
+    <br>
+    <img id="img" src="test.png">
+
+    <ul id="list1">
+    </ul>
+   
+    <ul id="list2">
+    </ul>
+
+    <div id="make_p">
+
+    </div>
+
+    <div id="make_p2">
+        
+    </div>
+
+    <div id="make_p3">
+        <p id="p_after">after</p>
+    </div>
+      
+    <script type="text/javascript" src="practice1.js"></script>
+      <!--javascriptの内容が適用される-->
+</body>
+<!--javascriptのloadイベントが完了する-->
+</html>
